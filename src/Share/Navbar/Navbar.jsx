@@ -1,12 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/icon.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+
+  const { user, logOut } = useContext(AuthContext)
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        console.log('Sign out')
+      })
+      .then(err => {
+        console.log(err)
+      })
+  }
+
     const navlinks = <>
     <li><NavLink className="text-white font-bold text-base" to="/">Home</NavLink></li>
     <li><NavLink className="text-white font-bold text-base" to="/about">About</NavLink></li>
     <li><NavLink className="text-white font-bold text-base" to="/contact">Contact</NavLink></li>
-    <li><NavLink className="text-white font-bold text-base" to="/login">Login</NavLink></li>
+    {user?.email ? <button className="text-white font-bold text-base" onClick={handleSignOut}>LogOut</button> : <li><NavLink className="text-white font-bold text-base" to="/login">Login</NavLink></li>}
     </>
     return (
         <div>
@@ -31,11 +46,25 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="avatar">
-    <div className="w-12">
-      <img className="rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-    </div>
-  </div>
+  <div className="dropdown dropdown-end flex gap-5 ">
+            
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                    
+                        <div className="avatar">
+                        <div className="w-12 rounded-full">
+                          {user ? <img src={user?.photoURL} /> : <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />}
+                        </div>
+                      </div>
+                    
+                </div>
+                <ul tabIndex={0} className="mt-14 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    <li>
+                        <Link to='/dashboard/DashboardHome' className="justify-between">
+                            Profile
+                        </Link>
+                    </li>
+                </ul>
+            </div>
   </div>
 </div>
         </div>

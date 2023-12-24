@@ -39,8 +39,10 @@ const Section = () => {
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
-          <div className='flex items-center'>
-            <div className='w-1/2 p-5'>
+          <div className='md:flex items-center'>
+            <div className='md:w-1/2 p-5' data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
             <div className="title text-3xl pl-6 font-bold mb-5 text-[#3789bc]" data-swiper-parallax="-300">
           Software Developers
           </div>
@@ -50,14 +52,18 @@ const Section = () => {
             </p>
           </div>
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-1/2' data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                  <img className='p-7 rounded-lg' src={slide1} alt="" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='flex items-center'>
-            <div className='w-1/2 p-5'>
+        <div className='md:flex items-center'>
+            <div className='md:w-1/2 p-5' data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
             <div className="title text-3xl font-bold mb-5 pl-6 text-[#3789bc]" data-swiper-parallax="-300">
           Web Developer
           </div>
@@ -67,14 +73,18 @@ const Section = () => {
             </p>
           </div>
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-1/2' data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                  <img className='p-7 rounded-lg' src={slide2} alt="" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='flex items-center'>
-            <div className='w-1/2 p-5'>
+        <div className='md:flex items-center'>
+            <div className='md:w-1/2 p-5' data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
             <div className="title text-3xl font-bold mb-5 pl-6 text-[#3789bc]" data-swiper-parallax="-300">
           App Developers
           </div>
@@ -84,7 +94,9 @@ const Section = () => {
             </p>
           </div>
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-1/2' data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                  <img className='p-7 rounded-lg' src={slide3} alt="" />
             </div>
           </div>
