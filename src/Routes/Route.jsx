@@ -56,7 +56,7 @@ const router = createBrowserRouter([
           {
               path: 'taskUpdate/:id',
               element: <PrivateRoute><TaskUpdate></TaskUpdate></PrivateRoute>,
-              loader: ({params})=> fetch(`https://task-management-server-three-xi.vercel.app/tasks/${params.id}`) 
+              loader: ({params})=> fetch(`https://management-platform-server-project.vercel.app/${params.id}`) 
           }
       ]
   }

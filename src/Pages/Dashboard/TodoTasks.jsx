@@ -27,7 +27,7 @@ const TodoTasks = ({task,refetch}) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`https://task-management-server-three-xi.vercel.app/tasks/${id}`)
+                axios.delete(`https://management-platform-server-project.vercel.app/tasks/${id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             refetch()

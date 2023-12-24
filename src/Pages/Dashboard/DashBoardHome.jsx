@@ -16,7 +16,7 @@ const DashBoardHome = () => {
     const { data: allTasks = [], refetch } = useQuery({
         queryKey: ['allRequests'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/tasks')
+            const res = await axios.get('https://management-platform-server-project.vercel.app/tasks')
             setTask(res.data)
         }
     })

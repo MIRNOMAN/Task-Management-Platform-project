@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import github from "../../../public/github.png"
+import github2 from "../../../public/github_picture.png"
 
 
 
@@ -89,7 +90,7 @@ const Login = () => {
 
                     <button onClick={handleGoogle} className="btn w-full btn-error text-white"><FcGoogle className="text-xl"></FcGoogle>Sign in With Google</button>
                     <button onClick={handleToGithubLogin} className="btn w-full btn-error text-white">
-                     <img className="w-7 h-7" src={github} alt="" />
+                     <img className="w-10 h-8" src={github2} alt="" />
                         Sign in With Github</button>
                 </form>
 

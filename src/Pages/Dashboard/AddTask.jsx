@@ -22,7 +22,7 @@ const AddTask = () => {
             email,
             status
         }
-        axios.post('http://localhost:5000/tasks',taskInfo)
+        axios.post('https://management-platform-server-project.vercel.app/tasks',taskInfo)
         .then(res =>{
             console.log(res.data);
             if(res.data.insertedId){
